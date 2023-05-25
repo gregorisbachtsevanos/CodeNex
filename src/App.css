@@ -4,39 +4,74 @@
   padding: 2rem;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* 
+.btn {
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hidden-btn {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.add-btn {
+  z-index: 10;
+  position: relative;
 }
 
-.card {
-  padding: 2em;
+.gen-btn {
+  transition: 250ms;
+  position: absolute;
 }
 
-.read-the-docs {
-  color: #888;
+.upl-btn {
+  position: absolute;
+  transition: 250ms;
+}
+
+.inp-btn {
+  position: absolute;
+  transition: 250ms;
+}
+
+.cam-btn {
+  position: absolute;
+  transition: 250ms;
+  transition-timing-function: 15s;
+}
+
+
+.btn-container:hover>.gen-btn {
+  transform: translate(-200%, -50%) !important;
+  transition: 30ms;
+}
+
+.btn-container:hover>.upl-btn {
+  transform: translate(-50%, -200%) !important;
+  transition: 600ms;
+}
+
+.btn-container:hover>.inp-btn {
+  transform: translate(100%, -50%) !important;
+  transition: 900ms;
+}
+
+.btn-container:hover>.cam-btn {
+  transform: translate(-50%, 100%) !important;
+  transition: 1.1s;
+} */
+
+.btn-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn{
+  display: flex;
+  justify-content: space-between;
 }
