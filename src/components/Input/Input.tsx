@@ -1,10 +1,13 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
 interface InputProps {
 	inputType?: string;
-	callback?: (e?: string) => void;
 }
 
-export const Input = ({ inputType = "text", callback }: InputProps) => {
-	return <input type={inputType} onChange={callback} />;
+export const Input = ({ inputType = "text" }: InputProps) => {
+	const [value, setValue] = useState("");
+	useEffect(() => console.log(value), [value]);
+	return (
+		<input type={inputType} onChange={(e) => setValue(e.target.value)} />
+	);
 };

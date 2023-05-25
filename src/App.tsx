@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { BiImageAlt } from "react-icons/bi";
 import { AiOutlineLink, AiFillCamera } from "react-icons/ai";
 import { TfiReload } from "react-icons/tfi";
@@ -10,14 +8,8 @@ import { Button } from "./components/Button/Button";
 import { Input } from "./components/Input/Input";
 
 function App() {
-	const [value, setValue] = useState("");
-
 	const handleClick = () => {
 		console.log(1);
-	};
-
-	const handleChange = (e: any) => {
-		setValue(e.target.value);
 	};
 
 	return (
@@ -49,7 +41,7 @@ function App() {
 					>
 						<BiImageAlt />
 					</Button>
-					<Input callback={(e) => handleChange(e)} />
+					<Input />
 					<Button callback={handleClick} />
 				</div>
 
