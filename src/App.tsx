@@ -3,9 +3,9 @@ import { AiOutlineLink, AiFillCamera } from "react-icons/ai";
 import { TfiReload } from "react-icons/tfi";
 import { IoMdAdd } from "react-icons/io";
 
-import "./App.css";
 import { Button } from "./components/Button/Button";
 import { Input } from "./components/Input/Input";
+import "./App.css";
 
 function App() {
 	const handleClick = () => {
