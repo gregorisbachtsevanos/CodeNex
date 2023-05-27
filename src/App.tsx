@@ -1,72 +1,28 @@
-import { BiImageAlt } from "react-icons/bi";
-import { AiOutlineLink, AiFillCamera } from "react-icons/ai";
-import { TfiReload } from "react-icons/tfi";
-import { IoMdAdd } from "react-icons/io";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { Input } from "./components/Input";
 
-import { Button } from "./components/Button/Button";
-import { Input } from "./components/Input/Input";
 import "./App.css";
 
 function App() {
-	const handleClick = () => {
-		console.log(1);
-	};
+	const [src, setSrc] = useState(null);
 
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm();
+
+	const onSubmit = (data: any) => console.log(data.image_url);
+	console.log(errors);
 	return (
 		<>
-			<div className="btn-container">
-				{/* <div className="btn">
-					<Button customClass="add-btn" callback={handleClick}>
-						<IoMdAdd />
-					</Button>
-					<Input />
-					<Button callback={handleClick} />
-				</div>
-
-				<div className="btn">
-					<Button
-						customClass="hidden-btn generate-btn"
-						callback={handleClick}
-					>
-						<TfiReload />
-					</Button>
-					<Input />
-					<Button callback={handleClick} />
-				</div> */}
-
-				<div className="btn">
-					<Button
-						customClass="hidden-btn upload-btn"
-						callback={handleClick}
-					>
-						<BiImageAlt />
-					</Button>
-					<Input />
-					<Button callback={handleClick} />
-				</div>
-
-				{/* <div className="btn">
-					<Button
-						customClass="hidden-btn link-btn"
-						callback={handleClick}
-					>
-						<AiOutlineLink />
-					</Button>
-					<Input inputType="url" />
-					<Button callback={handleClick} />
-				</div>
-
-				<div className="btn">
-					<Button
-						customClass="hidden-btn camera-btn"
-						callback={handleClick}
-					>
-						<AiFillCamera />
-					</Button>
-					<Input />
-					<Button callback={handleClick} />
-				</div> */}
-			</div>
+			{src && <img src={src} alt="" />}
+			<form onSubmit={handleSubmit(onSubmit)}>
+				{/* <input {...register("image_url")} type="text" /> */}
+				<Input type="text" {...register("image_url")} />
+				<input type="submit" />
+			</form>
 		</>
 	);
 }
