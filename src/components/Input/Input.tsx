@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react";
+import React, { forwardRef } from "react";
 
-interface InputProps {
-	inputType?: string;
-}
+type Ref = HTMLInputElement;
 
-export const Input = ({ inputType = "text" }: InputProps) => {
-	const [value, setValue] = useState("");
-	useEffect(() => console.log(value), [value]);
-	return (
-		<input type={inputType} onChange={(e) => setValue(e.target.value)} />
-	);
+type InputProps = {
+	type: string;
 };
+
+export const Input = forwardRef<Ref, InputProps>(({ type, ...rest }, ref) => {
+	return (
+		<div>
+			<input type={type} {...rest} ref={ref} />
+		</div>
+	);
+});
