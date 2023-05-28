@@ -33,7 +33,7 @@ export class ModelService {
 				data: raw,
 			}
 		);
-		// console.log(res.data);
+		console.log(res.data);
 		if (res.status === 200) return res.data.outputs;
 	};
 }
