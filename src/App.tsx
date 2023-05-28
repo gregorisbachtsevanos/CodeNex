@@ -3,9 +3,12 @@ import { useState } from "react";
 import { Input } from "./components/Input";
 
 import "./App.css";
+import { ModelService } from "./services/modelApi";
 
 function App() {
 	const [src, setSrc] = useState(null);
+	const [data, setData] = useState({});
+	const modelService = new ModelService();
 
 	const {
 		register,
@@ -13,7 +16,12 @@ function App() {
 		formState: { errors },
 	} = useForm();
 
-	const onSubmit = (data: any) => console.log(data.image_url);
+	const onSubmit = async (data: any) => {
+		await modelService
+			.faceRecognition(data.image_url)
+			.then((data) => console.log(data));
+		// .then((res) => localStorage.setItem("data", JSON.stringify(res)));
+	};
 	console.log(errors);
 	return (
 		<>
