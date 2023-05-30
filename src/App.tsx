@@ -22,6 +22,7 @@ function App() {
 		setHasImage(true);
 		// .then((res) => localStorage.setItem("data", JSON.stringify(res)));
 	};
+
 	console.log(errors);
 	console.log(data);
 
