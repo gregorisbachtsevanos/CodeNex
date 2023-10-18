@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import { config } from "../config";
-
+// api research or change api
 export class ModelService {
 	faceRecognition = async (image: string) => {
 		const IMAGE_URL = "https://samples.clarifai.com/metro-north.jpg";
