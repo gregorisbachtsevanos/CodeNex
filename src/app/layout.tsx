@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "styled-components";
+import StyledComponentsRegistry from "./lib/registry";
+import { defaultTheme } from "./theme";
+import { GlobalStyles } from "./global.styled";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +19,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
-			<body className={inter.className}>{children}</body>
-		</html>
+		<ThemeProvider theme={defaultTheme}>
+			<StyledComponentsRegistry>
+				<GlobalStyles />
+				<main className={inter.className}>{children}</main>
+			</StyledComponentsRegistry>
+		</ThemeProvider>
 	);
 }
