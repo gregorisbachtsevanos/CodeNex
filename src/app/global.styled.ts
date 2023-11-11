@@ -64,11 +64,4 @@ export const GlobalStyles = createGlobalStyle`
       border-radius: 5px;
       border: 0px none #ffffff;
   }
-
-  @media only screen and (${({ theme }) => theme.sizes.mobileL}) {
-    body{
-      overflow: hidden !important;
-    }
-  }
-
 `;
