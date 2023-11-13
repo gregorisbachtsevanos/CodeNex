@@ -16,9 +16,29 @@ const StyledPageLayoutContainer = styled.div`
 
 export const StyledImageContainer = styled.div`
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 45%;
+	left: 70%;
 	transform: translate(-50%, -50%);
+`;
+
+export const StyledPageContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 100vh;
+	padding: 2rem;
+	gap: 5rem;
+
+	.caption {
+		display: flex;
+		word-break: break-all;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		justify-content: flex-end;
+		h4 {
+			width: 50%;
+		}
+	}
 `;
 
 export default function PageLayout({

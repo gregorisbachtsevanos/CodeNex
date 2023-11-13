@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 import Wrapper from "./wrapper";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Montserrat({
+	weight: "300",
+	subsets: ["latin"],
+	display: "swap",
+});
 
 export const metadata: Metadata = {
 	title: "GenerateTPG",
@@ -17,7 +21,7 @@ export default function RootLayout({
 }) {
 	return (
 		<Wrapper>
-			<main className={inter.className}>{children}</main>
+			<main className={roboto.className}>{children}</main>
 		</Wrapper>
 	);
 }

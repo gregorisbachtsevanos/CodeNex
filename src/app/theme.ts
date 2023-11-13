@@ -21,7 +21,7 @@ export const defaultTheme: DefaultTheme = {
 
 export const Title2Xl = styled.h1`
 	font-weight: 700;
-	font-size: 44px;
+	font-size: 40px;
 	line-height: 48px;
 	margin: 0;
 `;
