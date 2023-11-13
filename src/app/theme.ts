@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from "styled-components";
-// background: linear-gradient(165deg, rgba(24,36,57,1) 0%, rgba(22,45,68,1) 33%, rgba(46,21,77,1) 66%, rgba(42,22,70,1) 100%);
+// linear-gradient(148deg, rgba(36,237,252,1) 0%, rgba(94,133,244,1) 23%, rgba(160,55,209,1) 70%, rgba(233,85,147,1) 100%);
 
 export const defaultTheme: DefaultTheme = {
 	palette: {

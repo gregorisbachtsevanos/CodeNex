@@ -7,10 +7,14 @@ import { GlobalStyles } from "./global.styled";
 export default function Wrapper({ children }: { children: React.ReactNode }) {
 	return (
 		<ThemeProvider theme={defaultTheme}>
-			<StyledComponentsRegistry>
-				<GlobalStyles />
-				{children}
-			</StyledComponentsRegistry>
+			<html>
+				<body>
+					<StyledComponentsRegistry>
+						<GlobalStyles />
+						{children}
+					</StyledComponentsRegistry>
+				</body>
+			</html>
 		</ThemeProvider>
 	);
 }
