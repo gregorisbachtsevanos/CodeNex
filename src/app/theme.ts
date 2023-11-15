@@ -3,6 +3,7 @@ import styled, { DefaultTheme } from "styled-components";
 
 export const defaultTheme: DefaultTheme = {
 	palette: {
+		black: "#121416",
 		dark: {
 			1: "#182439",
 			2: "#162d44",

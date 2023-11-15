@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledLayoutContainer = styled.div`
+const StyledChatContainer = styled.div`
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
@@ -12,3 +12,11 @@ const StyledLayoutContainer = styled.div`
 		rgba(42, 22, 70, 1) 100%
 	);
 `;
+
+export default function ChatLayout({
+	children,
+}: {
+	children: React.ReactNode;
+}) {
+	return <StyledChatContainer>{children}</StyledChatContainer>;
+}

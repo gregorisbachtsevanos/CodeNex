@@ -1,7 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { StyledPageLayoutContainer } from "../wrapper";
-import { FC } from "react";
+import StyledPageLayoutContainer from "../wrapper";
 
 export const StyledImageContainer = styled.div`
 	position: absolute;
@@ -15,10 +14,6 @@ export const StyledPageContainer = styled.div`
 	flex-direction: column;
 	justify-content: space-evenly;
 	height: 100vh;
-
-	.with-padding {
-		padding: 2rem;
-	}
 
 	.btn {
 		height: 40%;
@@ -40,19 +35,10 @@ export const StyledPageContainer = styled.div`
 	}
 `;
 
-type PageLayoutProps = {
-	withoutPadding?: React.ReactNode;
+export default function PageLayout({
+	children,
+}: {
 	children: React.ReactNode;
-};
-
-const PageLayout: FC<PageLayoutProps> = ({ withoutPadding, children }) => {
-	return (
-		<StyledPageLayoutContainer
-			className={`${!withoutPadding ? "with-padding" : ""}`}
-		>
-			{children}
-		</StyledPageLayoutContainer>
-	);
-};
-
-export default PageLayout;
+}) {
+	return <StyledPageLayoutContainer>{children}</StyledPageLayoutContainer>;
+}

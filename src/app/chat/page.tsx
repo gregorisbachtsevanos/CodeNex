@@ -1,6 +1,14 @@
-import React from "react";
+"use client";
 
-const Chat = () => {
-	return <div>page</div>;
+import PageLayout from "../(landing)/layout";
+import Sidebar from "./components/Sidebar/Sidebar";
+
+const ChatPage = () => {
+	return (
+		<PageLayout withoutPadding>
+			<Sidebar />
+		</PageLayout>
+	);
 };
-export default Chat;
+
+export default ChatPage;

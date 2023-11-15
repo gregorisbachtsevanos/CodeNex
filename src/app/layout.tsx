@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 
 import Wrapper from "./wrapper";
+import styled from "styled-components";
 
 const roboto = Montserrat({
 	weight: "300",
