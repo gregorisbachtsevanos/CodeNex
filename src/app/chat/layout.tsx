@@ -40,5 +40,5 @@ export default function PageLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	return <StyledPageLayoutContainer>{children}</StyledPageLayoutContainer>;
+	return <>{children}</>;
 }
