@@ -1,5 +1,5 @@
 # CodeNex
-### Welcome to CodeNex! This library provides a collection of utility functions designed to simplify and enhance the development experience in React applications.
+### Welcome to CodeNex! CodeNex is a library that provides a collection of utility functions designed to simplify and enhance the development experience in React applications.
 
 #### Getting Started
 
