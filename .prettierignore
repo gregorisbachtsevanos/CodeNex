@@ -1,5 +1,0 @@
-node_modules
-build
-coverage
-.gitlab-ci.yml
-public
